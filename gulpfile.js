@@ -15,7 +15,7 @@ const uglify = require('gulp-uglify');
 const cssmin = require('gulp-cssmin');
 
 gulp.task('sass', () => {
-    return gulp.src('app/scss/style.scss')
+    return gulp.src('app/scss/**/*.scss')
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(autoprefixer({
