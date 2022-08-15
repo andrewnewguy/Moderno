@@ -1,0 +1,347 @@
+@media (max-width: 1150px) {
+
+    .footer__inner {
+
+        flex-wrap: wrap;
+    }
+
+    .footer__col-adress {
+
+        margin-bottom: 30px;
+        min-width: 100%;
+    }
+
+    .header__text {
+
+        display: none;
+    }
+
+
+}
+
+@media (max-width: 900px) {
+
+    .footer__col-social {
+
+        margin-bottom: 30px;
+        margin-top: 30px;
+        min-width: 100%;
+    }
+
+    .footer__inner {
+
+        justify-content: flex-start;
+    }
+
+    .footer__col-menu {
+
+        &+& {
+
+            margin-left: 40px;
+        }
+    }
+}
+
+@media (max-width: 840px) {
+
+    .circle__menu {
+
+        z-index: 2;
+    }
+
+    .user__menu {
+
+        z-index: 2;
+    }
+
+    .menu__list {
+
+        display: none;
+        background-color: $bg;
+        position: absolute;
+        top: 150px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        padding-bottom: 30px;
+        text-align: center;
+
+        a {
+
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid $text;
+        }
+
+        li {
+
+            display: block;
+
+            &+li {
+
+                margin-left: 0;
+            }
+
+            &:first-child {
+
+                border-top: 1px solid $text;
+            }
+        }
+    }
+
+    .menu__btn {
+
+        display: block;
+        width: 30px;
+        cursor: pointer;
+
+        div {
+
+            background-color: #fff;
+            height: 3px;
+
+            &+div {
+
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+
+    .notification__box,
+    .message__box {
+
+        display: none;
+    }
+
+    .circle__menu {
+
+        left: auto;
+    }
+}
+
+@media (max-width: 540px) {
+
+    .footer__col {
+
+        min-width: 100%;
+    }
+
+
+    .footer__col-menu {
+
+        &+& {
+
+            margin-left: 0;
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+
+    .header__box {
+
+        position: absolute;
+        height: 62px;
+        background-color: #fff;
+        transition: all .3s;
+        left: 100%;
+        right: -100%;
+
+        &.active {
+
+            height: 62px;
+            left: 50px;
+
+        }
+    }
+
+    .header__btn-menu {
+
+        display: block;
+    }
+
+    .header__btn-menu {
+
+        width: 70px;
+        height: 70px;
+        background-color: #fff;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 4;
+
+        &::before {
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 36px;
+            color: $bg;
+            background-color: #fff;
+        }
+    }
+
+    .header__logo {
+
+        margin-left: 60px;
+    }
+
+    .menu__btn {
+
+        position: absolute;
+        top: 26px;
+
+        div {
+
+            background-color: $bg;
+        }
+    }
+
+    .header__top-inner {
+
+        height: 70px;
+    }
+
+    .user__box {
+
+        height: 60px;
+        margin-top: 10px;
+
+        .user__menu {
+
+            top: 60px;
+        }
+    }
+
+    .basket__box {
+
+        height: 53px;
+        margin-top: 16px;
+    }
+
+    .circle__menu {
+
+        top: 53px;
+        right: auto;
+    }
+
+    .menu__list {
+
+        top: 70px;
+    }
+}
+
+@media (max-width: 495px) {
+
+    .user {
+
+        top: 7px;
+    }
+
+    .user__info {
+
+        display: none;
+    }
+
+    .user__images {
+
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .header__box {
+
+        &.active {
+
+            left: 50px;
+        }
+    }
+
+    .basket__box {
+
+        margin-left: 10px;
+    }
+
+    .user {
+
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .user {
+
+        margin-right: 10px;
+    }
+
+    .basket {
+
+        margin-right: 10px;
+    }
+
+    .header__logo {
+
+        margin-left: 50px;
+    }
+
+    .circle__menu {
+
+        left: -20px;
+    }
+
+    .header__btn {
+
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 340px) {
+
+    .user {
+
+        margin-right: 0;
+    }
+
+    .circle__menu {
+
+        left: -35px;
+    }
+
+    .header__btn-login {
+
+        margin-left: 0;
+    }
+
+    .header__btn-menu {
+
+        width: 40px;
+    }
+}
+
+@media (max-width: 330px) {
+
+    .circle__menu {
+
+        left: -47px;
+    }
+}
+
+
+
+
+
+@media (min-width: 841px) {
+
+    .menu__list {
+
+        display: block !important;
+    }
+}
