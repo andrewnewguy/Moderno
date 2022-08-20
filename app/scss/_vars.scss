@@ -11,6 +11,11 @@ $twitter: #64b5f6;
 $linkedin: #4f71ce;
 $pinterest: #d32f2f;
 
+@mixin f300 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;    
+}
+
 @mixin f400 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;    
