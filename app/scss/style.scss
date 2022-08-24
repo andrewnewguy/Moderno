@@ -435,6 +435,142 @@
 
 // End header 
 
+// start modal
+
+#modal {
+
+    background-color: $green;
+    max-width: 730px;
+    width: 100%;
+    padding-top: 90px;
+    padding-bottom: 100px;
+}
+
+.login__wrapper {
+
+    .login__title {
+
+        font-size: 48px;
+        @include f700;
+        margin-bottom: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    form {
+
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .login__label-name {
+
+        position: relative;
+
+        &::before {
+
+            position: absolute;
+            content: "\f007";
+            font-family: 'icomoon';
+            font-size: 14px;
+            color: #fff;
+            left: 18px;
+            top: 9px;
+        }
+    }
+
+    .login__label-pass {
+
+        position: relative;
+
+        &::before {
+
+            position: absolute;
+            content: "\f023";
+            font-family: 'icomoon';
+            font-size: 14px;
+            color: #fff;
+            left: 18px;
+            top: 9px;
+        }
+    }
+
+    input {
+
+        height: 43px;
+        margin-bottom: 8px;
+        border: none;
+        outline: none;
+        background-color: #76ae36;
+        color: #fff;
+        font-size: 14px;
+        padding-left: 40px;
+        display: block;
+        width: 100%;
+
+        &::placeholder {
+
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+
+    button {
+
+        margin-top: 20px;
+        background-color: #fff;
+        padding: 18px 0 16px;
+        width: 140px;
+        text-transform: uppercase;
+        border: none;
+        margin-right: 10px;
+        @include f700;
+        color: #000;
+        text-align: center;
+        box-shadow: 0px 3px 3px 0px rgba(118, 174, 54, 0.75);
+        cursor: pointer;
+    }
+
+    .create-acc {
+
+        margin-top: 19px;
+        background-color: #76ae36;
+        padding: 14px 0 15px 28px;
+        text-align: center;
+        max-width: 245px;
+        width: 100%;
+        color: #fff;
+        font-size: 18px;
+        position: relative;
+
+        &::before {
+
+            position: absolute;
+            font-family: 'icomoon';
+            content: "\f044";
+            font-size: 18px;
+            left: 25px;
+        }
+    }
+
+    .lost-pass {
+
+        display: block;
+        margin-top: 20px;
+        color: #fff;
+        font-size: 18px;
+    }
+}
+
+.fancybox-button svg path {
+
+    color: #fff;
+}
+
+
+// end modal
+
 // Start search 
 
 .search {
@@ -2000,32 +2136,324 @@ button.icon-unsorted {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // product-one end
+
+// Page 404 start
+
+.page-404 {
+
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.page-404__wrapper,
+.about__wrapper,
+.contact__wrapper {
+
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+    margin-bottom: 150px;
+
+    .page-404__head,
+    .about__head {
+
+        font-size: 24px;
+        @include f500;
+        color: #444;
+        padding: 23px 27px;
+        border-bottom: 1px solid #dcdcdc;
+    }
+
+    .page-404__inner {
+
+        text-align: center;
+        background-color: $green;
+        color: #fff;
+
+        .page-404__404 {
+
+            @include f800;
+            font-size: 300px;
+            color: #fff;
+            padding-top: 70px;
+            padding-bottom: 20px;
+            line-height: 300px;
+            position: relative;
+
+            &::before {
+
+                position: absolute;
+                content: "";
+                background-image: url(../images/img404-shadow.png);
+                width: 157px;
+                height: 20px;
+                right: 163px;
+                bottom: 20px;
+            }
+
+            &::after {
+
+                position: absolute;
+                content: "";
+                background-image: url(../images/img404.png);
+                width: 150px;
+                height: 292px;
+                margin-left: 20px;
+            }
+        }
+
+        .page-404__title {
+
+            margin-bottom: 30px;
+            @include f300;
+            font-size: 30px;
+        }
+
+        .page-404__text {
+
+            max-width: 500px;
+            margin: 0 auto;
+            font-size: 18px;
+            margin-bottom: 60px;
+        }
+
+        .page-404__link {
+
+            color: #fff;
+            font-size: 14px;
+            text-transform: uppercase;
+            padding: 20px 30px 16px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            margin-bottom: 100px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+        }
+    }
+}
+
+// Page 404 end
+
+
+// About start
+
+.about__inner {
+
+    padding: 0px 50px;
+}
+
+.about__box {
+
+    h3 {
+
+        font-size: 20px;
+        @include f700;
+        color: #444;
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+
+    p {
+
+        font-size: 15px;
+        @include f400;
+        color: #707070;
+        margin-bottom: 40px;
+    }
+}
+
+// About End
+
+
+// Contact start
+
+.contact__head {
+
+    font-size: 24px;
+    @include f500;
+    color: #444;
+    padding: 23px 27px;
+    border-bottom: 1px solid #dcdcdc;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.contact__inner {
+
+    padding: 35px 40px 15px;
+}
+
+.contact__map {
+
+    margin-bottom: 50px;
+
+    iframe {
+
+        width: 100%;
+        height: 415px;
+    }
+}
+
+.contact__box {
+
+    display: flex;
+}
+
+.contact__info {
+
+    max-width: 330px;
+    width: 100%;
+    margin-right: 30px;
+}
+
+.contact__info-item {
+
+    margin-bottom: 30px;
+}
+
+.contact__info-title {
+
+    padding-bottom: 20px;
+    position: relative;
+    font-size: 20px;
+    @include f500;
+    color: $bg;
+    padding-left: 40px;
+
+    &::after {
+
+        content: "";
+        width: 44px;
+        height: 4px;
+        background-color: $green;
+        position: absolute;
+        left: 40px;
+        bottom: 0;
+    }
+}
+
+.contact__info-address {
+
+    &::before {
+
+        content: "\f041";
+        font-family: 'icomoon';
+        color: $green;
+        font-size: 24px;
+        position: absolute;
+        left: 0;
+    }
+}
+
+.contact__info-phone {
+
+    &::before {
+
+        content: "\f095";
+        font-family: 'icomoon';
+        color: $green;
+        font-size: 24px;
+        position: absolute;
+        left: 0;
+    }
+}
+
+.contact__info-email {
+
+    &::before {
+
+        content: "\f003";
+        font-family: 'icomoon';
+        color: $green;
+        font-size: 24px;
+        position: absolute;
+        left: 0;
+    }
+}
+
+.contact__info-content {
+
+    margin-top: 30px;
+    padding-left: 40px;
+    color: #707070;
+    max-width: 230px;
+}
+
+.contact__form-title {
+
+    margin-bottom: 25px;
+    font-size: 24px;
+    @include f500;
+    color: #333;
+}
+
+.contact__form {
+
+    width: 100%;
+
+    .contact__form-row {
+
+        max-width: 730px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        input {
+
+            border: none;
+            height: 43px;
+            padding-left: 17px;
+            padding-right: 17px;
+            background-color: #f1f4f5;
+            width: 350px;
+            margin-bottom: 30px;
+            outline: none;
+
+            &::placeholder {
+
+                font-size: 15px;
+                color: #7a7a7a;
+            }
+        }
+    }
+
+    textarea {
+
+        border: none;
+        padding: 13px 17px;
+        background-color: #f1f4f5;
+        height: 190px;
+        width: 100%;
+        display: block;
+        resize: none;
+        margin-bottom: 25px;
+        outline: none;
+
+        &::placeholder {
+
+            font-size: 15px;
+            color: #7a7a7a;
+        }
+    }
+
+    button {
+
+        border: none;
+        font-size: 16px;
+        background-color: $green;
+        @include f700;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 20px 5px;
+        color: #fff;
+        width: 190px;
+    }
+}
+
+
+
+
+// Contact end
 
 
 
