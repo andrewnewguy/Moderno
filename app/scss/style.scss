@@ -2451,10 +2451,437 @@ button.icon-unsorted {
 }
 
 
-
-
 // Contact end
 
+// settings  start
 
+.settings {
+
+    padding-bottom: 100px;
+}
+
+.product-one__tabs.settings__tabs {
+
+    display: flex;
+
+    .tabs {
+
+        max-width: 270px;
+        width: 100%;
+        margin-right: 30px;
+        border: 1px solid #dedede;
+        border-bottom: none;
+        text-align-last: left;
+        display: block;
+        height: 100%;
+
+        span {
+
+            display: block;
+            background-color: #fff;
+            border-bottom: 1px solid #dedede;
+            padding: 17px 17px 17px 50px;
+            color: #707070;
+            font-size: 14px;
+            @include f500;
+
+            &.active {
+
+                border-bottom: 1px solid $green;
+                color: #37474f;
+
+                &::before {
+
+                    color: $green;
+                }
+            }
+
+            &::before {
+
+                left: 24px;
+                color: #444;
+            }
+        }
+    }
+
+    .tabs .tab+.tab {
+
+        border-left: none;
+    }
+
+    .tab_content {
+
+        width: 100%;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+    }
+}
+
+.page-box {
+
+    background-color: #fff;
+    border: 1px solid #dedede;
+    min-height: 100%;
+}
+
+.page-box__title {
+
+    border-bottom: 1px solid #dedede;
+    padding: 18px 34px;
+    font-size: 24px;
+    @include f500;
+    color: $bg;
+}
+
+.page-box__content {
+
+    padding: 30px 35px 80px;
+}
+
+.settings__line {
+
+    margin-bottom: 21px;
+    display: flex;
+
+    label {
+
+        width: 260px;
+        font-size: 15px;
+        @include f400;
+        color: #444;
+    }
+
+    input {
+
+        max-width: 540px;
+        width: 100%;
+        background-color: #f9f9f9;
+        border: 1px solid #dedede;
+        height: 40px;
+        color: #000;
+        outline: none;
+        padding: 0px 10px;
+    }
+
+    select {
+
+        max-width: 540px;
+        width: 100%;
+        background-color: #f9f9f9;
+        border: 1px solid #dedede;
+        height: 40px;
+        color: #707070;
+        outline: none;
+        padding: 0px 10px;
+    }
+}
+
+
+
+// settings end
+
+// profile start
+
+.profile__inner {
+
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.profile__aside {
+
+    margin-right: 30px;
+    max-width: 270px;
+    width: 100%;
+}
+
+.profile__content {
+
+    width: 100%;
+}
+
+.profile-status {
+
+    color: #707070;
+    border: 1px solid #d6d5d6;
+    font-size: 13px;
+    padding: 6px 9px 5px 25px;
+    position: relative;
+
+    &::before {
+
+        position: absolute;
+        content: "";
+        left: 10px;
+        top: 13px;
+        height: 9px;
+        width: 9px;
+        border-radius: 50%;
+    }
+}
+
+.profile-on {
+
+    &::before {
+
+        background-color: $green;
+    }
+}
+
+.profile-off {
+
+    &::before {
+
+        background-color: $text;
+    }
+}
+
+.profile__aside-btn {
+
+    margin-bottom: 13px;
+    text-align: center;
+}
+
+.profile__aside-message {
+
+    margin-bottom: 17px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    @include f500;
+    background-color: $text;
+    padding: 18px 10px;
+    position: relative;
+    box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+
+    &::before {
+
+        position: absolute;
+        content: "\f003";
+        font-family: 'icomoon';
+        font-size: 16px;
+        left: 50px;
+        top: 17px;
+    }
+}
+
+.profile__aside-following {
+
+    margin-bottom: 17px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    @include f700;
+    background-color: $green;
+    padding: 18px 10px;
+    box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+}
+
+.profile__banner {
+
+    padding: 20px;
+    border: 1px solid #dedede;
+    background-color: #fff;
+    margin-bottom: 25px;
+}
+
+.profile__banner-image {
+
+    min-height: 332px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.profile__items {
+
+    display: flex;
+    border: 1px solid #dedede;
+}
+
+.profile__item {
+
+    width: 25%;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 5px 17px;
+
+    &+.profile__item {
+
+        border-left: 1px solid #dedede;
+    }
+}
+
+.profile__item-title {
+
+    font-size: 14px;
+    color: $bg;
+    @include f500;
+}
+
+.profile__item-content {
+
+    font-size: 14px;
+    color: #707070;
+    @include f500;
+
+    &.profile__item-sales {
+
+        color: $bg;
+    }
+}
+
+.profile-settings {
+
+    .product-one__tabs.settings__tabs {
+
+        .tabs span {
+
+            position: relative;
+
+            &.about__tab::before {
+
+                position: absolute;
+                left: 27px;
+                top: 15px;
+                font-size: 14px;
+                color: #d0d0d0;
+                content: "\f007";
+                font-family: 'icomoon';
+            }
+
+            &.products__tab::before {
+
+                position: absolute;
+                left: 25px;
+                top: 15px;
+                font-size: 14px;
+                color: #d0d0d0;
+                content: "\f0f2";
+                font-family: 'icomoon';
+            }
+
+            &.message__tab::before {
+
+                position: absolute;
+                left: 25px;
+                top: 15px;
+                font-size: 14px;
+                color: #d0d0d0;
+                content: "\f003";
+                font-family: 'icomoon';
+            }
+
+            &.review__tab::before {
+
+                position: absolute;
+                left: 25px;
+                top: 15px;
+                font-size: 14px;
+                color: #d0d0d0;
+                content: "\f0e6";
+                font-family: 'icomoon';
+            }
+
+            &.followers__tab::before {
+
+                position: absolute;
+                left: 25px;
+                top: 15px;
+                font-size: 14px;
+                color: #d0d0d0;
+                content: "\f0c0";
+                font-family: 'icomoon';
+            }
+
+            &.active {
+
+                &::before {
+
+                    color: $green;
+                }
+            }
+        }
+    }
+}
+
+.personal-box {
+
+    background-color: #fff;
+    padding: 35px 40px 25px;
+    border: 1px solid #dedede;
+}
+
+.personal-box__title {
+
+    font-size: 20px;
+    @include f700;
+    margin-bottom: 25px;
+    color: $bg;
+}
+
+.personal-box__text {
+
+    margin-bottom: 40px;
+
+    p {
+
+        color: #707070;
+    }
+}
+
+.personal-box__item-head {
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.personal-box__item-name {
+
+    font-size: 16px;
+    @include f500;
+    color: $bg;
+    font-style: italic;
+}
+
+.personal-box__item-number {
+
+    font-size: 16px;
+    @include f700;
+    color: $bg;
+}
+
+.personal-box__item-line {
+
+    height: 15px;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+    margin-bottom: 23px;
+
+    span {
+
+        display: block;
+        border-radius: 3px;
+        height: 15px;
+        background-image: url(../images/probar.jpg);
+        background-repeat: repeat;
+    }
+}
+
+.tabs {
+
+    font-size: 14px;
+    @include f500;
+    color: $bg;
+}
+
+
+
+
+// profile end
 
 @import 'media';
