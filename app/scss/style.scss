@@ -128,6 +128,8 @@
 
 .menu__list {
 
+    z-index: 4;
+
     li {
         display: inline-block;
 
@@ -296,9 +298,11 @@
 
         .circle__menu {
 
-            height: auto;
-            overflow: hidden;
+            height: 300px;
+            overflow: visible;
             border-top-width: 1px;
+            transition: all .3s;
+            z-index: 5;
         }
 
         .circle__item {
@@ -439,6 +443,7 @@
 
 #modal {
 
+    display: none;
     background-color: $green;
     max-width: 730px;
     width: 100%;
@@ -2153,83 +2158,83 @@ button.icon-unsorted {
     border: 1px solid #dcdcdc;
     background-color: #fff;
     margin-bottom: 150px;
+}
 
-    .page-404__head,
-    .about__head {
+.page-404__head,
+.about__head {
 
-        font-size: 24px;
-        @include f500;
-        color: #444;
-        padding: 23px 27px;
-        border-bottom: 1px solid #dcdcdc;
+    font-size: 24px;
+    @include f500;
+    color: #444;
+    padding: 23px 27px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.page-404__inner {
+
+    text-align: center;
+    background-color: $green;
+    color: #fff;
+}
+
+.page-404__404 {
+
+    @include f800;
+    font-size: 300px;
+    color: #fff;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    line-height: 300px;
+    position: relative;
+
+    &::before {
+
+        position: absolute;
+        content: "";
+        background-image: url(../images/img404-shadow.png);
+        width: 157px;
+        height: 20px;
+        right: 163px;
+        bottom: 20px;
     }
 
-    .page-404__inner {
+    &::after {
 
-        text-align: center;
-        background-color: $green;
-        color: #fff;
-
-        .page-404__404 {
-
-            @include f800;
-            font-size: 300px;
-            color: #fff;
-            padding-top: 70px;
-            padding-bottom: 20px;
-            line-height: 300px;
-            position: relative;
-
-            &::before {
-
-                position: absolute;
-                content: "";
-                background-image: url(../images/img404-shadow.png);
-                width: 157px;
-                height: 20px;
-                right: 163px;
-                bottom: 20px;
-            }
-
-            &::after {
-
-                position: absolute;
-                content: "";
-                background-image: url(../images/img404.png);
-                width: 150px;
-                height: 292px;
-                margin-left: 20px;
-            }
-        }
-
-        .page-404__title {
-
-            margin-bottom: 30px;
-            @include f300;
-            font-size: 30px;
-        }
-
-        .page-404__text {
-
-            max-width: 500px;
-            margin: 0 auto;
-            font-size: 18px;
-            margin-bottom: 60px;
-        }
-
-        .page-404__link {
-
-            color: #fff;
-            font-size: 14px;
-            text-transform: uppercase;
-            padding: 20px 30px 16px;
-            border: 1px solid #fff;
-            border-radius: 4px;
-            margin-bottom: 100px;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 700;
-        }
+        position: absolute;
+        content: "";
+        background-image: url(../images/img404.png);
+        width: 150px;
+        height: 292px;
+        margin-left: 20px;
     }
+}
+
+.page-404__title {
+
+    margin-bottom: 30px;
+    @include f300;
+    font-size: 30px;
+}
+
+.page-404__text {
+
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+.page-404__link {
+
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 20px 30px 16px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    margin-bottom: 100px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
 }
 
 // Page 404 end
@@ -2471,7 +2476,7 @@ button.icon-unsorted {
         margin-right: 30px;
         border: 1px solid #dedede;
         border-bottom: none;
-        text-align-last: left;
+        text-align: left;
         display: block;
         height: 100%;
 
@@ -2566,14 +2571,20 @@ button.icon-unsorted {
 
     select {
 
-        max-width: 540px;
-        width: 100%;
+        // max-width: 540px;
+        // width: 100%;
         background-color: #f9f9f9;
         border: 1px solid #dedede;
         height: 40px;
         color: #707070;
         outline: none;
         padding: 0px 10px;
+    }
+
+    .jq-selectbox.jqselect {
+
+        max-width: 540px;
+        width: 100%;
     }
 }
 
@@ -2797,13 +2808,11 @@ button.icon-unsorted {
                 font-family: 'icomoon';
             }
 
-            &.active {
+            &.active::before {
 
-                &::before {
-
-                    color: $green;
-                }
+                color: $green;
             }
+
         }
     }
 }
@@ -2880,8 +2889,370 @@ button.icon-unsorted {
 }
 
 
-
-
 // profile end
+
+// upload start
+
+.upload__inner {
+
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    margin-bottom: 110px;
+
+    button {
+
+        color: #fff;
+        background-color: $green;
+        border: none;
+        padding: 15px 36px;
+        margin-left: 175px;
+        cursor: pointer;
+    }
+}
+
+.upload__inner-title {
+
+    padding: 16px 35px 18px;
+    @include f500;
+    font-size: 24px;
+    color: $bg;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 40px;
+}
+
+.upload__inner-content {
+
+    margin-bottom: 40px;
+    padding-left: 45px;
+    padding-right: 50px;
+}
+
+.upload-line {
+
+    margin-bottom: 25px;
+    display: flex;
+
+    label {
+
+        min-width: 175px;
+        padding-right: 15px;
+        padding-top: 5px;
+        color: #444;
+
+        span {
+
+            color: $green;
+        }
+
+        &::placeholder {
+
+            color: #707070;
+        }
+    }
+
+    select,
+    input,
+    textarea {
+
+        width: 100%;
+        display: block;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0 18px;
+        outline: none;
+    }
+
+    textarea {
+
+        resize: none;
+        height: 150px;
+        padding: 8px 18px;
+    }
+
+    .jq-selectbox {
+
+        width: 100%;
+    }
+
+    .jq-selectbox__select {
+
+        height: 40px;
+        padding: 8px 18px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto-Regular', sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 25px;
+    }
+
+    .jq-selectbox__trigger-arrow {
+
+        border: none;
+        top: 0;
+        right: 20px;
+        line-height: 40px;
+        font-size: 15px;
+
+        &::before {
+
+            font-family: 'icomoon';
+            content: "\f0d7";
+        }
+    }
+
+    .jq-selectbox__trigger {
+
+        border-left: none;
+    }
+
+    .jq-selectbox__dropdown {
+
+        top: 38px;
+    }
+
+    input[type="file"] {
+
+        outline: none;
+    }
+
+    .jq-file__browse {
+
+        position: absolute;
+        top: 5px;
+        right: auto;
+        left: 9px;
+        padding: 0 12px;
+        border: 1px solid #d7d7d7;
+        border-left: 1px solid #d7d7d7;
+        border-radius: 0;
+        background: #fff;
+        box-shadow: none;
+        text-shadow: none;
+        font-size: 12px;
+        line-height: 26px;
+        color: #444;
+    }
+
+    .jq-file {
+
+        width: 100%;
+        padding: 0 18px;
+        border-radius: 0;
+        box-shadow: none;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+    }
+
+    .jq-file__name {
+
+        box-sizing: border-box;
+        width: 100%;
+        height: 40px;
+        margin-left: 100px;
+        padding: 0;
+        border: none;
+        border-bottom-color: transparent;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        font-size: 12px;
+        color: #707070;
+        line-height: 40px;
+        outline: none;
+    }
+}
+
+// upload end
+
+// withdrawals start
+
+.withdrawals__inner {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.withdrawals__col {
+
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 570px;
+    width: 100%;
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+    margin-bottom: 145px;
+    height: 100%;
+}
+
+.withdrawals__box {
+
+    width: 100%;
+}
+
+.withdrawals__title {
+
+    padding: 20px 33px;
+    font-size: 24px;
+    @include f500;
+    color: $bg;
+    border-bottom: 1px solid #dcdcdc;
+    background-color: #fff;
+}
+
+.withdrawals__content {
+
+    padding: 30px 40px;
+
+    button {
+
+        font-size: 16px;
+        @include f700;
+        line-height: 36px;
+        color: #fff;
+        background-color: $green;
+        border: none;
+        padding: 8px 30px;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+.withdrawals__form-line {
+
+    font-size: 16px;
+    @include f500;
+    color: $bg;
+    margin-bottom: 30px;
+
+    label {
+
+        display: block;
+        margin-bottom: 25px;
+
+        span {
+
+            color: $green;
+        }
+    }
+
+    input,
+    .jq-selectbox {
+
+        width: 100%;
+        height: 40px;
+        background-color: #f9f9f9;
+        outline: none;
+        border: 1px solid #dcdcdc;
+
+        &::placeholder {
+
+            padding-left: 18px;
+        }
+    }
+
+    input[type="file"] {
+
+        outline: none;
+    }
+
+    .jq-selectbox__select {
+
+        height: 38px;
+        padding: 7px 0;
+        border: none;
+        border-bottom-color: none;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto-Regular', sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 25px;
+        outline: none;
+    }
+
+    .jq-selectbox__trigger {
+
+        border-left: none;
+    }
+
+    .jq-selectbox__dropdown {
+
+        top: 35px;
+        border-radius: none;
+    }
+
+    .jq-selectbox__trigger-arrow {
+
+        border: none;
+        top: 0;
+        right: 20px;
+        line-height: 40px;
+        font-size: 15px;
+
+        &::before {
+
+            font-family: 'icomoon';
+            content: "\f0d7";
+        }
+    }
+
+    .jq-selectbox__select-text {
+
+        padding-left: 18px;
+    }
+}
+
+.withdrawals__content-line {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #fff;
+    color: #444;
+    height: 42px;
+    align-items: center;
+    font-size: 13px;
+    @include f500;
+
+    &:nth-child(odd) {
+
+        background-color: #f9f9f9;
+    }
+
+    .content-col__mail {
+
+        @include f400;
+    }
+
+    .content-col__price {
+
+        @include f700;
+    }
+
+    .content-col__status {
+
+        width: 50px;
+        @include f700;
+
+        span {
+
+            color: $green;
+        }
+    }
+}
+
+
+
+
+// withdrawals end
 
 @import 'media';

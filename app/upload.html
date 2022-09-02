@@ -432,7 +432,7 @@
 
                             <li><a href="#">Home</a></li>
 
-                            <li><span>About Us</span></li>
+                            <li><span>Upload Product</span></li>
 
                         </ul>
 
@@ -442,497 +442,317 @@
 
             </div>
 
-            <section class="profile">
+            <section class="upload">
 
                 <div class="container">
 
-                    <div class="profile__inner">
+                    <form>
 
-                        <div class="profile__aside">
+                        <div class="upload__inner">
 
-                            <div class="aside__item product__aside">
+                            <div class="upload__inner-title">Upload Your item</div>
 
-                                <div class="aside__title">Product Author</div>
+                            <div class="upload__inner-content">
 
-                                <div class="product-author__box">
+                                <div class="upload-line">
 
-                                    <div class="author__avatar">
+                                    <label>Select Categories <span>*</span></label>
 
-                                        <img src="../images/avatar.jpg" alt="">
-
-                                    </div>
-
-                                    <div class="author__info">
-
-                                        <div class="author__name">PsdBoss</div>
-
-                                        <div href="#" class="profile-status profile-on">Online</div>
-
-                                    </div>
+                                    <select required>
+                                        <option>Select</option>
+                                        <option>Select</option>
+                                        <option>Select</option>
+                                        <option>Select</option>
+                                    </select>
 
                                 </div>
 
-                                <ul class="author__awards-list">
+                                <div class="upload-line">
 
-                                    <li class="award-img icon-meh-o"
-                                        style="background-image: url(images/icons/award-icon1.jpg);"></li>
+                                    <label>Product Name <span>*</span></label>
 
-                                    <li class="award-img icon-pagelines"
-                                        style="background-image: url(images/icons/award-icon2.jpg);"></li>
-
-                                    <li class="award-img icon-bolt"
-                                        style="background-image: url(images/icons/award-icon3.jpg);"></li>
-
-                                    <li class="award-img icon-foursquare"
-                                        style="background-image: url(images/icons/award-icon4.jpg);"></li>
-
-                                    <li class="award-img icon-cny"
-                                        style="background-image: url(images/icons/award-icon5.jpg);"></li>
-
-                                </ul>
-
-                            </div>
-
-                            <ul class="footer__social-link">
-
-                                <li>
-
-                                    <a class="link-facebook" href="#"></a>
-
-                                </li>
-
-                                <li>
-
-                                    <a class="link-twitter" href="#"></a>
-
-                                </li>
-
-                                <li>
-
-                                    <a class="link-youtube" href="#"></a>
-
-                                </li>
-
-                                <li>
-
-                                    <a class="link-linkedin" href="#"></a>
-
-                                </li>
-
-                            </ul>
-
-                            <div class="profile__aside-btn">
-
-                                <a class="profile__aside-message" href="#">Send Message</a>
-
-                                <a class="profile__aside-following" href="#">Following</a>
-
-                            </div>
-
-                        </div>
-
-                        <div class="profile__content">
-
-                            <div class="profile__banner">
-
-                                <div class="profile__banner-image" style="background-image: url(../images/banner.jpg);">
-                                </div>
-
-                            </div>
-
-                            <div class="profile__items">
-
-                                <div class="profile__item">
-
-                                    <div class="profile__item-title">Country:</div>
-
-                                    <div class="profile__item-content">England</div>
+                                    <input type="text" placeholder="Enter your product name here ..." required>
 
                                 </div>
 
-                                <div class="profile__item">
+                                <div class="upload-line">
 
-                                    <div class="profile__item-title">Member Since:</div>
+                                    <label>Product Description <span>*</span></label>
 
-                                    <div class="profile__item-content">December 26, 2014</div>
-
-                                </div>
-
-                                <div class="profile__item">
-
-                                    <div class="profile__item-title">Author Rating:</div>
-
-                                    <div class="profile__item-content">
-
-                                        <div class="product__item-star">
-
-                                            <div class="rate-star"></div>(<span>05</span>)
-
-                                        </div>
-
-                                    </div>
+                                    <textarea placeholder="<h1> Type your text  here </h1/>" required></textarea>
 
                                 </div>
 
-                                <div class="profile__item">
+                                <div class="upload-line">
 
-                                    <div class="profile__item-title">Total Sales:</div>
+                                    <label>Upload Main File <span>*</span></label>
 
-                                    <div class="profile__item-content profile__item-sales">$ 5,030</div>
+                                    <input type="file" required data-placeholder="No File Chosen" data-browse="Chose File">
+
+                                </div>
+
+                                <div class="upload-line">
+
+                                    <label>Upload Screenshots <span>*</span></label>
+
+                                    <input type="file" required data-placeholder="No File Chosen" data-browse="Chose File">
+
+                                </div>
+
+                                <div class="upload-line" required>
+
+                                    <label>File Included <span>*</span></label>
+
+                                    <select required>
+                                        <option>Select File Type </option>
+                                        <option>Select File Type </option>
+                                        <option>Select File Type </option>
+                                        <option>Select File Type </option>
+                                    </select>
+
+                                </div>
+
+                                <div class="upload-line">
+
+                                    <label>File Dimensions <span>*</span></label>
+
+                                    <input type="text" placeholder="Enter the item  dimentionss here ..." required>
+
+                                </div>
+
+                                <div class="upload-line">
+
+                                    <label>Item Tags <span>*</span></label>
+
+                                    <input type="text" placeholder="Enter Tag Here" required>
 
                                 </div>
 
                             </div>
 
-                        </div>
+                            <div class="upload__inner-title">Set Your Price (US$)</div>
 
-                    </div>
+                            <div class="upload__inner-content">
+
+                                <div class="upload-line">
+
+                                    <label>Regular License <span>*</span></label>
+
+                                    <input type="text" placeholder="$00.00" required>
+
+                                </div>
+
+                                <div class="upload-line">
+
+                                    <label>Extended License <span>*</span></label>
+
+                                    <input type="text" placeholder="$00.00" required>
+
+                                </div>
+
+                                <button type="submit">Submit</button>
+
+                            </div>
+
+                    </form>
 
                 </div>
-
-            </section>
-
-            <section class="settings profile-settings">
-
-                <div class="container">
-
-                    <div class="profile__tabs product-one__tabs settings__tabs ">
-
-                        <div class="tabs">
-
-                            <span class="tab active profile__tab settings__tab about__tab" data-id="1">About Me</span>
-
-                            <span class="tab profile__tab settings__tab products__tab" data-id="2">Products ( 10 )</span>
-
-                            <span class="tab profile__tab settings__tab message__tab" data-id="3">Message Box</span>
-
-                            <span class="tab profile__tab settings__tab review__tab" data-id="4">Customer Reviews ( 20 )</span>
-
-                            <span class="tab profile__tab settings__tab followers__tab" data-id="5">Followers (100 )</span>
-
-                        </div>
-
-                        <div class="tab_content">
-
-                            <div class="tab-item active-tab" id="1">
-
-                                <div class="personal-box">
-
-                                    <div class="personal-box__title">About Me:</div>
-
-                                    <div class="personal-box__text">
-
-                                        <p>
-                                            Bimply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                                            been the industry's standard dummy text ever since the 1500s, when an
-                                            unknown printer took a galley of type and scrambled it to make a type
-                                            specimen book. It has survived not only five centuries, but also the leap
-                                            into electronic.
-                                        </p>
-
-                                    </div>
-
-                                    <div class="personal-box__items">
-
-                                        <div class="personal-box__title">Skills:</div>
-
-                                        <div class="personal-box__item">
-
-                                            <div class="personal-box__item-head">
-
-                                                <div class="personal-box__item-name">
-
-                                                    Graphic Design
-
-                                                </div>
-
-                                                <div class="personal-box__item-number">
-
-                                                    80%
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="personal-box__item-line">
-
-                                                <span style="max-width: 80%;"></span>
-
-                                            </div>
-
-                                        </div>
-
-                                        <div class="personal-box__item">
-
-                                            <div class="personal-box__item-head">
-
-                                                <div class="personal-box__item-name">
-
-                                                    Graphic Design
-
-                                                </div>
-
-                                                <div class="personal-box__item-number">
-
-                                                    90%
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="personal-box__item-line">
-
-                                                <span style="max-width: 90%;"></span>
-
-                                            </div>
-
-                                        </div>
-
-                                        <div class="personal-box__item">
-
-                                            <div class="personal-box__item-head">
-
-                                                <div class="personal-box__item-name">
-
-                                                    Graphic Design
-
-                                                </div>
-
-                                                <div class="personal-box__item-number">
-
-                                                    70%
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="personal-box__item-line">
-
-                                                <span style="max-width: 70%;"></span>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="tab-item" id="2">
-
-                            </div>
-
-                            <div class="tab-item" id="3">
-
-                            </div>
-
-                            <div class="tab-item" id="4">
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
 
         </div>
 
-        <footer class="footer">
+        </section>
 
-            <div class="footer__content">
+    </div>
 
-                <div class="container">
+    <footer class="footer">
 
-                    <div class="footer__inner">
+        <div class="footer__content">
 
-                        <div class="footer__col footer__col-adress">
+            <div class="container">
 
-                            <div class="footer__col-title">
+                <div class="footer__inner">
 
-                                About Company
+                    <div class="footer__col footer__col-adress">
 
-                            </div>
+                        <div class="footer__col-title">
 
-                            <div class="footer__col-text">
-
-                                Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim digniSuspen disse.Fusce
-                                sit
-                                amet urna iat.Praesent vel rutrum purus.
-
-                            </div>
-
-                            <div class="footer__info">
-
-                                PO Box 16122 Collins Street West
-                                Victoria 8007 Australia
-
-                            </div>
-
-                            <a class="footer__info footer__info-phone" href="tel:61383766284">
-
-                                +61 3 8376 6284
-
-                            </a>
+                            About Company
 
                         </div>
 
-                        <div class="footer__col">
+                        <div class="footer__col-text">
 
-                            <div class="footer__col-title">
-
-                                Join Our Community
-
-                            </div>
-
-                            <ul class="footer__col-list">
-
-                                <li>
-
-                                    <a href="#">Home</a>
-
-                                </li>
-
-                                <li>
-
-                                    <a href="#">Forums</a>
-
-                                </li>
-
-                                <li>
-
-                                    <a href="#">Become an Author</a>
-
-                                </li>
-
-                                <li>
-
-                                    <a href="#">Community Meetups</a>
-
-                                </li>
-
-                                <li>
-
-                                    <a href="#">Become an Affiliate</a>
-
-                                </li>
-
-                            </ul>
+                            Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim digniSuspen disse.Fusce
+                            sit
+                            amet urna iat.Praesent vel rutrum purus.
 
                         </div>
 
-                        <div class="footer__col footer__col-menu">
+                        <div class="footer__info">
 
-                            <div class="footer__col-title">
-
-                                Need Help?
-
-                            </div>
-
-                            <ul class="footer__col-list">
-
-                                <li>
-
-                                    <a href="#">Help Center</a>
-
-                                </li>
-
-                                <li>
-
-                                    <a href="#">Foxtar Market Terms</a>
-
-                                </li>
-
-                                <li>
-
-                                    <a href="#">Author Terms</a>
-
-                                </li>
-
-                                <li>
-
-                                    <a href="#">Foxtar Licenses</a>
-
-                                </li>
-
-                                <li>
-
-                                    <a href="#">Contact Us</a>
-
-                                </li>
-
-                            </ul>
+                            PO Box 16122 Collins Street West
+                            Victoria 8007 Australia
 
                         </div>
 
-                        <div class="footer__col footer__col-menu footer__col-social">
+                        <a class="footer__info footer__info-phone" href="tel:61383766284">
 
-                            <div class="footer__col-title">
+                            +61 3 8376 6284
 
-                                Follow Us On
+                        </a>
+
+                    </div>
+
+                    <div class="footer__col">
+
+                        <div class="footer__col-title">
+
+                            Join Our Community
+
+                        </div>
+
+                        <ul class="footer__col-list">
+
+                            <li>
+
+                                <a href="#">Home</a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="#">Forums</a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="#">Become an Author</a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="#">Community Meetups</a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="#">Become an Affiliate</a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="footer__col footer__col-menu">
+
+                        <div class="footer__col-title">
+
+                            Need Help?
+
+                        </div>
+
+                        <ul class="footer__col-list">
+
+                            <li>
+
+                                <a href="#">Help Center</a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="#">Foxtar Market Terms</a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="#">Author Terms</a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="#">Foxtar Licenses</a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="#">Contact Us</a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="footer__col footer__col-menu footer__col-social">
+
+                        <div class="footer__col-title">
+
+                            Follow Us On
+
+                        </div>
+
+                        <ul class="footer__social-link">
+
+
+
+                            <li>
+
+                                <a class="link-facebook" href="#"></a>
+
+                            </li>
+
+
+                            <li>
+
+                                <a class="link-twitter" href="#"></a>
+
+                            </li>
+
+
+                            <li>
+
+                                <a class="link-youtube" href="#"></a>
+
+                            </li>
+
+
+                            <li>
+
+                                <a class="link-pinterest" href="#"></a>
+
+                            </li>
+
+
+                            <li>
+
+                                <a class="link-linkedin" href="#"></a>
+
+                            </li>
+
+                        </ul>
+
+                        <div class="footer__form">
+
+                            <div class="footer__form-title">
+
+                                Newsletter Sign Up!
 
                             </div>
 
-                            <ul class="footer__social-link">
+                            <form>
 
+                                <input type="text" placeholder="E-mail Address">
+                                <button type="submit"></button>
 
-
-                                <li>
-
-                                    <a class="link-facebook" href="#"></a>
-
-                                </li>
-
-
-                                <li>
-
-                                    <a class="link-twitter" href="#"></a>
-
-                                </li>
-
-
-                                <li>
-
-                                    <a class="link-youtube" href="#"></a>
-
-                                </li>
-
-
-                                <li>
-
-                                    <a class="link-pinterest" href="#"></a>
-
-                                </li>
-
-
-                                <li>
-
-                                    <a class="link-linkedin" href="#"></a>
-
-                                </li>
-
-                            </ul>
-
-                            <div class="footer__form">
-
-                                <div class="footer__form-title">
-
-                                    Newsletter Sign Up!
-
-                                </div>
-
-                                <form>
-
-                                    <input type="text" placeholder="E-mail Address">
-                                    <button type="submit"></button>
-
-                                </form>
-
-                            </div>
+                            </form>
 
                         </div>
 
@@ -942,26 +762,28 @@
 
             </div>
 
-            <div class="footer__copy">
+        </div>
 
-                <div class="container">
+        <div class="footer__copy">
 
-                    <div class="footer__copy-text">
+            <div class="container">
 
-                        © 2017 Foxtar market place. Trademarks and brands are the property of their respective owners.
+                <div class="footer__copy-text">
 
-                    </div>
+                    © 2017 Foxtar market place. Trademarks and brands are the property of their respective owners.
 
                 </div>
 
             </div>
 
-        </footer>
+        </div>
+
+    </footer>
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="js/libs.min.js"></script>
-        <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
 
     </div>
 
