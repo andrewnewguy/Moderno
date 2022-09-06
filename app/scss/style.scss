@@ -443,7 +443,6 @@
 
 #modal {
 
-    display: none;
     background-color: $green;
     max-width: 730px;
     width: 100%;
@@ -543,8 +542,7 @@
         background-color: #76ae36;
         padding: 14px 0 15px 28px;
         text-align: center;
-        max-width: 245px;
-        width: 100%;
+        width: 245px;
         color: #fff;
         font-size: 18px;
         position: relative;
@@ -676,6 +674,19 @@
 
     padding: 110px 0;
     background: $grey;
+
+    .product__item {
+
+        flex-basis: calc(25% - 30px);
+        margin-left: 30px;
+    }
+}
+
+.products__wrapper,
+.product-slider__wrapper {
+
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .products__inner-btn {
@@ -705,8 +716,9 @@
 .products__inner-box {
 
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    margin-left: -30px;
 }
 
 .product__item {
@@ -1519,9 +1531,10 @@ button.icon-unsorted {
 
     .product__item {
 
-        max-width: 270px;
+        flex-basis: calc(33.3333% - 30px);
         background-color: #fff;
-        transition: all .5s;
+        transition: all .3s;
+        margin-left: 30px;
     }
 
     .product__item-img {
@@ -1555,9 +1568,12 @@ button.icon-unsorted {
 .product-page__items {
 
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-bottom: 30px;
     flex-wrap: wrap;
+    margin-left: -30px;
+
+    .product__item {}
 }
 
 .pagination__list {
@@ -1644,6 +1660,7 @@ button.icon-unsorted {
     &.list {
 
         max-width: 100%;
+        flex-basis: 100%;
 
         .product__item-img {
 
@@ -1725,7 +1742,7 @@ button.icon-unsorted {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px 0;
+    padding: 16px;
 }
 
 .product-one__images {
@@ -2074,6 +2091,7 @@ button.icon-unsorted {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 270px;
 }
 
 .award-img {
