@@ -970,12 +970,15 @@
         transition: all .3s;
         left: 100%;
         right: -100%;
+        overflow: hidden;
+        width: 0;
 
         &.active {
 
             height: 62px;
             left: 50px;
-
+            width: 80%;
+            overflow: visible;
         }
     }
 

@@ -11,11 +11,8 @@ html {
 html,
 body {
     height: 100%;
-}
-
-body {
-
-    overflow-x: hidden;
+    position: relative;
+    // overflow: hidden;
 }
 
 a {
